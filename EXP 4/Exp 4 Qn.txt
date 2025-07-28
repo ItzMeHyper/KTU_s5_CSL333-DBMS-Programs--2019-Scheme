@@ -1,0 +1,23 @@
+Database initialization 
+Aim
+
+To insert and import data to a database using UI
+
+Theory
+
+1. Connect to Your Database:
+
+Open SQL Developer and connect to your Oracle database where you want to import the data.
+Create an Empty Oracle Table
+Import Data from Excel: Right-click on the table where you want to import the data, Select “Import Data” from the context menu, Browse and select your Excel file (in XLSX format), Verify the data in the preview (first 100 rows). 
+
+Select Columns to Be Imported
+
+Map Excel Columns to Table Columns:
+
+Verify Settings and Execute:
+
+Check the Imported Data
+
+RESULT
+ Database initialization - data insert, data import to a database using UI is completed and output is verified. CO2 is attained.
