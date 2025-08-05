@@ -90,14 +90,6 @@ VALUES (371, 'McGraw Hill', '11 West 19th Street, New York');
 INSERT INTO PUBLISHER (Publisher_Id, Name, Address)
 VALUES (370, 'Pearson Education', '221B Baker Street, London');
 
-ALTER TABLE BOOK DISABLE CONSTRAINT SYS_C0081846;
-ALTER TABLE BOOK DISABLE CONSTRAINT SYS_C0081845;
-
-SELECT constraint_name, constraint_type, table_name
-FROM user_constraints
-WHERE table_name = 'BOOK';
-
-
 --1
 ALTER TABLE BOOK
 ADD Ratings int;
@@ -105,6 +97,16 @@ ADD Ratings int;
 --2
 ALTER TABLE MEMBER
 MODIFY Phone_Number int;
+
+
+-----
+SELECT constraint_name, constraint_type, table_name
+FROM user_constraints
+WHERE table_name = 'BOOK';
+
+ALTER TABLE BOOK DISABLE CONSTRAINT SYS_C0081846;
+ALTER TABLE BOOK DISABLE CONSTRAINT SYS_C0081845;
+-----
 
 --3
 TRUNCATE TABLE PUBLISHER;
@@ -114,5 +116,6 @@ DROP TABLE AUTHOR;
 
 --5
 RENAME TABLE LATE_FEE_RULE  TO FINE;
+
 
 
