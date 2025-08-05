@@ -35,7 +35,7 @@ SELECT ABS(-42) AS Abs_Column FROM DUAL;
 SELECT SYSDATE AS Current_Date FROM DUAL;
 
 -- 13
-SELECT To_Char(SYSDATE, 'DD-MM-YYYY HH24:MI:SS') AS Formatted_DateTime FROM DUAL;
+SELECT TO_CHAR(SYSDATE, 'DD-MM-YYYY') AS "Date", TO_CHAR(SYSDATE, 'HH:MI:SS AM') AS "Time" FROM DUAL;
 
 -- 14
 SELECT SYSTIMESTAMP AS System_Timestamp FROM DUAL;
@@ -62,7 +62,7 @@ SELECT RPAD(123, 6, '0') AS Padded_Number FROM DUAL;
 SELECT REVERSE('uoyevol I') AS Reversed_String FROM DUAL;
 
 -- 22
-SELECT REVERSE('racecar') AS Palindrome_String FROM DUAL;
+SELECT CASE WHEN 'racecar' = REVERSE('racecar') THEN 'Palindrome' ELSE 'Not Palindrome' END AS Palindrome_Result FROM DUAL;
 
 -- 23
 SELECT LENGTH('Oracle Database') AS String_Length FROM DUAL;
@@ -80,4 +80,5 @@ SELECT SUBSTR('India is my country', 7, 2) AS Substring FROM DUAL;
 SELECT SUBSTR('ItzMehyper', 4, 2) AS Middle_Chars FROM DUAL;
 
 -- 28
+
 SELECT SUBSTR('Substring', 1, 3) AS First_Three FROM DUAL;
