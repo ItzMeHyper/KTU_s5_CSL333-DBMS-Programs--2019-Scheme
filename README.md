@@ -12,6 +12,9 @@ KTU S5 CSL 333 - Database Management Systems [DBMS] Lab Programs [2019 Scheme]
 | 4 | Database initialization  |
 | 5 | DML Commands |
 | 6 | IMPLEMENTATION OF BUILT IN FUNCTIONS IN RDBMS USING TEMP TABLES. |
-| 7 |  |
+| 7 | IMPLEMENTATION OF AGGREGATE FUNCTIONS IN SQL |
+| 8 | ORDER BY, GROUP BY AND HAVING CLAUSE |
+| 9 | SET OPERATORS,NESTED QUERIES, JOIN |
+| 10 |  |
 
 **Programs or Program name may vary according to colleges**
