@@ -52,7 +52,7 @@ SELECT * FROM Orders;
 SELECT * FROM Customer
 ORDER BY CustomerName ASC;
 
---2
+--2   
 SELECT * FROM Orders
 ORDER BY OrderDate ASC;
 
@@ -62,17 +62,22 @@ WHERE BirthDate > TO_DATE('01-01-1980', 'DD-MM-YYYY')
 ORDER BY BirthDate DESC;
 
 --4
-SELECT o.OrderID, o.OrderDate, c.CustomerName
-FROM Orders o
-JOIN Customer c ON o.CustomerID = c.CustomerID
-WHERE c.Country = 'USA'
-ORDER BY o.OrderDate DESC;
+SELECT * FROM Orders 
+WHERE CustomerID IN(SELECT CustomerID FROM Customer WHERE Country = 'USA') 
+ORDER BY OrderDate DESC;
 
 --5
-SELECT C.CustomerName, COUNT(O.OrderID) AS TotalOrders
+SELECT C.CustomerID, C.CustomerName, COUNT(o.OrderID) AS TotalOrders
 FROM Customer C
-JOIN Orders O ON C.CustomerID = O.CustomerID
-GROUP BY C.CustomerName;
+LEFT JOIN Orders O ON C.CustomerID = O.CustomerID
+GROUP BY C.CustomerID, C.CustomerName;
+
+-- or 
+
+SELECT C.CustomerID, C.CustomerName,
+(SELECT COUNT(*) FROM ORDERS O
+WHERE O.CustomerID = C.CustomerID) AS TotalOrders
+FROM Customer C;
 
 --6
 SELECT City, COUNT(CustomerID) AS TotalCustomers
