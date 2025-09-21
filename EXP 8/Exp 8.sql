@@ -31,6 +31,9 @@ INSERT INTO Customer VALUES (2, 'Bob Johnson', '2345678901', '456 Banana Ave', '
 INSERT INTO Customer VALUES (3, 'Charlie Lee', '3456789012', '789 Cherry Blvd', 'Chicago', '60007', 'USA');
 INSERT INTO Customer VALUES (4, 'David Kumar', '4567890123', '321 Orange Rd', 'Delhi', '110001', 'India');
 INSERT INTO Customer VALUES (5, 'Eve Wang', '5678901234', '654 Mango Ln', 'Shanghai', '200000', 'China');
+INSERT INTO Customer VALUES (6, 'Ravi Singh', '9999999999', '123 New Rd', 'Delhi', '110001', 'India');
+INSERT INTO Customer VALUES (7, 'Anita Mehra', '8888888888', '456 New Rd', 'Delhi', '110001', 'India');
+INSERT INTO Customer VALUES (8, 'Sunil Rao', '7777777777', '789 New Rd', 'Delhi', '110001', 'India');
 SELECT * FROM Customer;
 
 INSERT INTO Employees VALUES (101, 'John', 'Brown', TO_DATE('15-06-1975', 'DD-MM-YYYY'));
@@ -45,6 +48,8 @@ INSERT INTO Orders VALUES (1002, 1, 102, TO_DATE('15-02-2021', 'DD-MM-YYYY'), 2)
 INSERT INTO Orders VALUES (1003, 2, 103, TO_DATE('10-03-2021', 'DD-MM-YYYY'), 1);
 INSERT INTO Orders VALUES (1004, 3, 104, TO_DATE('25-04-2021', 'DD-MM-YYYY'), 3);
 INSERT INTO Orders VALUES (1005, 3, 105, TO_DATE('30-05-2021', 'DD-MM-YYYY'), 2);
+INSERT INTO Orders VALUES (1006, 1, 101, TO_DATE('01-06-2021', 'DD-MM-YYYY'), 1);
+INSERT INTO Orders VALUES (1007, 1, 102, TO_DATE('01-07-2021', 'DD-MM-YYYY'), 2);
 SELECT * FROM Orders;
 
 
