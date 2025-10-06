@@ -89,14 +89,22 @@ UNION
  WHERE o.orderid NOT IN (SELECT orderid FROM Delivery));
 
 --7
-(SELECT custid FROM Orders)
+SELECT c.custname
+FROM Customers c
+JOIN Orders o ON c.custid = o.custid
 INTERSECT
-(SELECT custid FROM Delivery);
+SELECT c.custname
+FROM Customers c
+JOIN Delivery d ON c.custid = d.custid;
 
 --8
-(SELECT custid FROM Orders)
+SELECT c.custname
+FROM Customers c
+JOIN Orders o ON c.custid = o.custid
 MINUS
-(SELECT custid FROM Delivery);
+SELECT c.custname
+FROM Customers c
+JOIN Delivery d ON c.custid = d.custid;
 
 --9
 SELECT c.custname, COUNT(o.orderid) AS total_orders
@@ -141,7 +149,7 @@ FROM Customers
 GROUP BY state;
 
 --14
-SELECT category, itemname, price 
-FROM Items 
+SELECT category, itemid, itemname, price
+FROM Items
 WHERE price > (SELECT AVG(price) FROM Items)
-GROUP BY category, itemname, price;
+GROUP BY category, itemid, itemname, price;
