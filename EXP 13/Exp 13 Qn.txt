@@ -1,0 +1,13 @@
+•	EXP 13 :IMPLEMENTATION OF CONTROL STATEMENTS USING PL/SQL
+IMPLEMENTATION OF CONTROL STATEMENTS USING PL/SQL 
+AIM: Implementation of Control Statements using PL/SQL 
+CO4: Implement procedures, functions, and control structures using PL/SQL. (Cognitive Knowledge Level: Apply)
+THEORY:
+PL/SQL is basically a procedural language, which provides the functionality of decision making, iteration and many more features of procedural programming languages. PL/SQL can execute a number of queries in one block using single command
+
+Questions:
+1.	PL/SQL program to find factorials of a number.
+2.	PL/SQL program to find the greatest of three numbers.
+3.	PL/SQL program to implement a calculator.
+4.	PL/SQL program to generate fibonacci series.
+

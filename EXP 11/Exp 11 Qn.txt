@@ -1,0 +1,10 @@
+EXPERIMENT NO. 11
+DCL COMMANDS
+AIM: To implement DCL commands
+CO2 : Construct queries using SQL for database creation, interaction, modification, and updation. (Cognitive Knowledge Level: Apply)
+THEORY: 
+DCL (Data Control Language): 
+DCL includes commands such as GRANT and REVOKE which mainly deal with the rights, permissions, and other controls of the database system. List of DCL commands: 
+GRANT: This command gives users access privileges to the database. 
+REVOKE: This command withdraws the user’s access privileges given by using the GRANT command.
+
