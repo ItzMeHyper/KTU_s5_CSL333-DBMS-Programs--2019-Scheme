@@ -1,0 +1,26 @@
+EXPERIMENT- 15
+CREATION OF CURSORS. 
+AIM: 
+To implement cursor using PL/SQL
+THEORY: 
+A cursor is a pointer to this context area. PL/SQL controls the context area through a cursor. A 
+cursor holds the rows (one or more) returned by a SQL statement. The set of rows the cursor holds 
+is referred to as the active set. 
+Implicit Cursor Syntax
+	DECLARE
+	BEGIN
+	END; 
+Explicit cursor syntax
+	DECLARE variables; 
+ 		records; 
+ 		create a cursor; 
+ 	BEGIN  
+		OPEN cursor;  
+		FETCH cursor; 
+ 		process the records; 
+ 		CLOSE cursor;  
+	END; 
+
+Questions:   Cursor  
+1)Create bank_details (accno, name, balance, adate).
+ Calculate the interest of the amount  and insert into a new table with fields (accno, interest). Interest= 0.08*balance. 
