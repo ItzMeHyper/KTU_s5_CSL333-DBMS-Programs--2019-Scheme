@@ -24,4 +24,5 @@ KTU S5 CSL 333 - Database Management Systems [DBMS] Lab Programs [2019 Scheme]
 | 16 | Familiarization Of No SQL DB and CURD Operations |
 | 17 | Creation Of Packages |
 | 18 | Exception Handling |
+
 **Programs or Program name may vary according to colleges**
