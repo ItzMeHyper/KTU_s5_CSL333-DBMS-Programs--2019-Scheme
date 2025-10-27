@@ -1,0 +1,34 @@
+EXPERIMENT- 15
+CREATION OF PACKAGES
+AIM:
+To implement Packages.
+THEORY:
+A package is a schema object that groups logically related PL/SQL types, variables, constants,
+subprograms, cursors, and exceptions. A package is compiled and stored in the database, where many applications can share its contents.
+CREATE [OR REPLACE] PACKAGE <package_name> IS
+<sub_program and public element declaration> END <package name>
+Questions:
+1)	CREATE PACKAGE SPECIFICATION CREATE OR REPLACE PACKAGE Pk1 AS
+PROCEDURE proc1(a int,b int); END Pk1;
+
+2)	PACKAGE BODY
+CREATE OR REPLACE PACKAGE BODY Pk1 AS
+PROCEDURE proc1(a int,b int) IS BEGIN
+dbms_output.put_line('Sum:'||(a+b)); END proc1;
+END Pk1;
+ 
+
+3)	
+READ VALUES DECLARE
+p int;
+q int; BEGIN
+p:=:p;
+q:=:q;
+Pk1.proc1(p,q); END;
+
+Question:
+
+ Create a package pk1 consisting of the following functions and procedures Procedure proc1 to find the sum, average and product of two numbers
+Procedure proc2 to find the square root of a number
+Function named fn11 to check whether a number is even or not A function named fn22 to find the sum of 3 numbers
+Use this package in a PL/SQL program. Call the functions f11, f22 and procedures pro1, pro2 within the program and display their result.
