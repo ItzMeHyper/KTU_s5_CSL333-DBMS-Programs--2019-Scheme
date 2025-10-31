@@ -17,12 +17,13 @@ END;
 
 DECLARE
     c INT;
+    num INT;
 BEGIN
-    c := factorial(5);
-    DBMS_OUTPUT.PUT_LINE('Factorial of 5 is ' || c);
+    num :=  &num;
+    c := factorial(num);
+    DBMS_OUTPUT.PUT_LINE('Factorial of  ' || num ||'  is ' || c);
 END;
 /
-
 
 -- 2. Student Details Table and Procedure
 CREATE TABLE student_details (
@@ -243,3 +244,4 @@ SELECT * FROM deleted;
 
 UPDATE emp_details SET salary = 10000 WHERE empid = 1;
 SELECT * FROM updatd;
+
