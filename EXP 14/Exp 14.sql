@@ -88,41 +88,38 @@ SELECT * FROM students;
 
 DELETE FROM students WHERE id = 1;
 
-CREATE OR REPLACE FUNCTION f1
-RETURN VARCHAR AS
-    CURSOR c IS
-        SELECT total FROM students;
-    t INT;
+CREATE OR REPLACE FUNCTION f1(t IN INT)
+RETURN VARCHAR
+AS
     a INT;
+    g VARCHAR(2);
 BEGIN
-    OPEN c;
-    LOOP
-        FETCH c INTO t;
-        EXIT WHEN c%NOTFOUND;
-        a := t / 3;
-        IF (a >= 90) THEN
-            RETURN 'A+';
-        ELSIF (a >= 80) THEN
-            RETURN 'A';
-        ELSIF (a >= 70) THEN
-            RETURN 'B';
-        ELSIF (a >= 60) THEN
-            RETURN 'C';
-        ELSE
-            RETURN 'D';
-        END IF;
-    END LOOP;
-    CLOSE c;
+    a := t / 3;
+    IF (a >= 90) THEN
+        g := 'A+';
+    ELSIF (a >= 80) THEN
+        g := 'A';
+    ELSIF (a >= 70) THEN
+        g := 'B';
+    ELSIF (a >= 60) THEN
+        g := 'C';
+    ELSE
+        g := 'D';
+    END IF;
+    RETURN g;
 END;
 /
 
-CREATE OR REPLACE PROCEDURE p1 AS
+CREATE OR REPLACE PROCEDURE p1
+AS
     c VARCHAR(30);
 BEGIN
-    c := f1();
-    UPDATE students SET grade = c;
+    UPDATE students
+    SET grade = f1(total);
+    DBMS_OUTPUT.PUT_LINE('Grades updated successfully!');
 END;
 /
+
 BEGIN
     p1;
 END;
@@ -244,4 +241,5 @@ SELECT * FROM deleted;
 
 UPDATE emp_details SET salary = 10000 WHERE empid = 1;
 SELECT * FROM updatd;
+
 
