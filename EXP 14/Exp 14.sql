@@ -88,7 +88,7 @@ SELECT * FROM students;
 
 DELETE FROM students WHERE id = 1;
 
-CREATE OR REPLACE FUNCTION f1(t IN INT)
+CREATE OR REPLACE FUNCTION f1(t INT)
 RETURN VARCHAR
 AS
     a INT;
@@ -110,9 +110,7 @@ BEGIN
 END;
 /
 
-CREATE OR REPLACE PROCEDURE p1
-AS
-    c VARCHAR(30);
+CREATE OR REPLACE PROCEDURE p1 AS
 BEGIN
     UPDATE students
     SET grade = f1(total);
@@ -241,5 +239,6 @@ SELECT * FROM deleted;
 
 UPDATE emp_details SET salary = 10000 WHERE empid = 1;
 SELECT * FROM updatd;
+
 
 
